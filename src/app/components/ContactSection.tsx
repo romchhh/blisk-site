@@ -6,7 +6,6 @@ import { useBooking } from '../booking'
 import { getServiceOptions, getServiceTitle, t } from '../copy'
 import { isZipServed, normalizeZip } from '../data/zipCodes'
 import { submitLead } from '../lib/lead'
-import { trackFormStartOnce, trackLead } from '../lib/metaPixel'
 import Reveal from './Reveal'
 import { SectionHeading } from './sections/SectionHeading'
 import styles from './ContactSection.module.css'
@@ -58,14 +57,11 @@ export default function ContactSection() {
       comment: form.comment.trim() || undefined,
     })
     if (ok) {
-      trackLead('contact')
       setStatus('success')
     } else {
       setStatus('error')
     }
   }
-
-  const handleFormStart = () => trackFormStartOnce('contact')
 
   const serviceOptions = getServiceOptions()
 
@@ -116,8 +112,6 @@ export default function ContactSection() {
               <form
                 className={styles.form}
                 onSubmit={handleSubmit}
-                onInput={handleFormStart}
-                onChange={handleFormStart}
               >
                 <p className={styles.formTitle}>{t.contact.formTitle}</p>
                 <div className={styles.row}>

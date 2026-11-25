@@ -1,6 +1,15 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import SiteShell from './components/SiteShell'
+import { buildMetadata } from './lib/seo'
 import styles from './not-found.module.css'
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Сторінку не знайдено',
+  description: 'Сторінка не існує або була переміщена. Поверніться на головну Blisk Eco Cleaning.',
+  path: '/404',
+  noIndex: true,
+})
 
 export default function NotFound() {
   return (

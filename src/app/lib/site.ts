@@ -4,11 +4,23 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://blisk.cv.u
 
 export const SITE_NAME = BRAND.name
 
-/** Meta (Facebook) Pixel — used for ad attribution and PageView tracking */
-export const META_PIXEL_ID = '1457531026596195'
+export const DEFAULT_TITLE = 'Хімчистка меблів у Чернівцях | Blisk Eco Cleaning'
 
 export const DEFAULT_DESCRIPTION =
-  'Хімчистка меблів, матраців і килимів у Чернівцях та області. Миття вікон, прибирання. Eco Cleaning Blisk — чистота у кожному куточку. Запис у Direct @blisk_cv.'
+  'Хімчистка диванів, матраців і килимів у Чернівцях та області. Миття вікон, виїзд додому. Оцінка після фото, мінімальне замовлення від 1000 грн. Blisk Eco Cleaning.'
+
+export const SEO_KEYWORDS = [
+  'хімчистка меблів Чернівці',
+  'хімчистка диванів Чернівці',
+  'хімчистка матраців Чернівці',
+  'хімчистка килимів Чернівці',
+  'миття вікон Чернівці',
+  'хімчистка меблів з виїздом',
+  'Blisk Eco Cleaning',
+  'Blisk Чернівці',
+  'прибирання Чернівці',
+  'чистка дивана Чернівці',
+] as const
 
 export const LEGAL_PATHS = {
   privacy: '/privacy-policy',

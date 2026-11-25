@@ -11,7 +11,6 @@ import {
 } from 'react'
 import dynamic from 'next/dynamic'
 import ScrollBookingPrompt from './components/booking/ScrollBookingPrompt'
-import { trackBookClick } from './lib/metaPixel'
 import { useBodyScrollLock } from './lib/useBodyScrollLock'
 
 const BookingModal = dynamic(() => import('./components/booking/BookingModal'), { ssr: false })
@@ -41,7 +40,6 @@ export function BookingProvider({ children }: { children: ReactNode }) {
   const [promptDismissed, setPromptDismissed] = useState(false)
 
   const openBookingModal = useCallback(() => {
-    trackBookClick()
     setIsOpen(true)
   }, [])
   const closeBookingModal = useCallback(() => setIsOpen(false), [])

@@ -1,10 +1,17 @@
 import HomePageClient from './HomePageClient'
 import JsonLd from './components/JsonLd'
-import { buildMetadata, localBusinessJsonLd, webSiteJsonLd } from './lib/seo'
-import { SITE_NAME } from './lib/site'
+import {
+  breadcrumbJsonLd,
+  buildMetadata,
+  faqJsonLd,
+  localBusinessJsonLd,
+  webSiteJsonLd,
+} from './lib/seo'
+import { DEFAULT_DESCRIPTION, DEFAULT_TITLE } from './lib/site'
 
 export const metadata = buildMetadata({
-  title: `${SITE_NAME} — хімчистка меблів у Чернівцях`,
+  title: DEFAULT_TITLE,
+  description: DEFAULT_DESCRIPTION,
   path: '/',
 })
 
@@ -13,6 +20,8 @@ export default function HomePage() {
     <>
       <JsonLd data={localBusinessJsonLd()} />
       <JsonLd data={webSiteJsonLd()} />
+      <JsonLd data={faqJsonLd()} />
+      <JsonLd data={breadcrumbJsonLd()} />
       <HomePageClient />
     </>
   )

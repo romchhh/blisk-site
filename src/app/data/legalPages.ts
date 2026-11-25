@@ -19,8 +19,8 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
   privacy: {
     slug: 'privacy-policy',
     path: LEGAL_PATHS.privacy,
-    title: 'Privacy Policy',
-    description: 'How Blisk Eco Cleaning collects, uses, and protects your personal information.',
+    title: 'Політика конфіденційності',
+    description: 'Як Blisk Eco Cleaning збирає, використовує та захищає персональні дані клієнтів у Чернівцях.',
     updated: 'September 22, 2025',
     sections: [
       {
@@ -95,8 +95,8 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
   terms: {
     slug: 'terms-and-conditions',
     path: LEGAL_PATHS.terms,
-    title: 'Terms & Conditions',
-    description: 'Terms and conditions for using Blisk Eco Cleaning website and booking services.',
+    title: 'Умови використання',
+    description: 'Умови користування сайтом і послугами Blisk Eco Cleaning у Чернівцях.',
     updated: 'September 22, 2025',
     sections: [
       {
@@ -174,8 +174,8 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
   cancellation: {
     slug: 'cancellation-policy',
     path: LEGAL_PATHS.cancellation,
-    title: 'Cancellation Policy',
-    description: 'Blisk Eco Cleaning cancellation, rescheduling, and refund guidelines.',
+    title: 'Політика скасування',
+    description: 'Правила скасування, перенесення та повернення коштів Blisk Eco Cleaning.',
     updated: 'September 22, 2025',
     sections: [
       {
@@ -228,8 +228,8 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
   cookies: {
     slug: 'cookies-policy',
     path: LEGAL_PATHS.cookies,
-    title: 'Cookies Policy',
-    description: 'How Blisk Eco Cleaning uses cookies and similar technologies on this website.',
+    title: 'Політика cookies',
+    description: 'Як Blisk Eco Cleaning використовує cookies та подібні технології на сайті.',
     updated: 'September 22, 2025',
     sections: [
       {
@@ -287,8 +287,8 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
   subscription: {
     slug: 'subscription-terms',
     path: LEGAL_PATHS.subscription,
-    title: 'Subscription Terms',
-    description: 'Terms for Blisk Eco Cleaning recurring and subscription cleaning plans.',
+    title: 'Умови підписки',
+    description: 'Умови регулярних і підпискових послуг Blisk Eco Cleaning.',
     updated: 'September 22, 2025',
     sections: [
       {

@@ -1323,10 +1323,12 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   max-width: 36ch;
+  margin-inline: auto;
   padding-bottom: clamp(28px, 4vw, 44px);
+  text-align: center;
 }
 
 .ctaTitle {
@@ -1350,7 +1352,7 @@
 .ctaActions {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   margin-top: 4px;
   width: 100%;
@@ -1484,27 +1486,26 @@
 
   .ctaPanel {
     grid-template-columns: 1fr;
-    text-align: left;
+    text-align: center;
     padding-bottom: 0;
   }
 
   .ctaCopy {
-    max-width: none;
+    max-width: 34ch;
     order: 1;
     padding-bottom: 24px;
   }
 
   .ctaActions {
-    align-items: stretch;
+    align-items: center;
   }
 
   .ctaBtn {
-    width: 100%;
+    width: min(100%, 280px);
   }
 
   .ctaAlt {
     text-align: center;
-    width: 100%;
   }
 
   .ctaVisual {

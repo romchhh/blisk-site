@@ -5,7 +5,6 @@ import { BRAND } from '../../brand'
 import { useBooking } from '../../booking'
 import { getServiceTitle, t } from '../../copy'
 import { submitLead } from '../../lib/lead'
-import { resetFormStartTracking, trackFormStartOnce, trackLead } from '../../lib/metaPixel'
 import WhatsAppLink from '../WhatsAppLink'
 import styles from './BookingModal.module.css'
 
@@ -38,7 +37,6 @@ export default function BookingModal({
     if (!isOpen) {
       setStatus('idle')
       setForm(emptyForm())
-      resetFormStartTracking('quick-booking')
       return
     }
     dialogRef.current?.focus()
@@ -63,14 +61,11 @@ export default function BookingModal({
       service: service ? getServiceTitle(service) : undefined,
     })
     if (ok) {
-      trackLead('quick-booking')
       setStatus('success')
     } else {
       setStatus('error')
     }
   }
-
-  const handleFormStart = () => trackFormStartOnce('quick-booking')
 
   return (
     <div className={styles.overlay} onClick={onClose} role="presentation">
@@ -104,8 +99,6 @@ export default function BookingModal({
             <form
               className={styles.form}
               onSubmit={handleSubmit}
-              onInput={handleFormStart}
-              onChange={handleFormStart}
               noValidate
             >
               <input

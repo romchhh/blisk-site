@@ -5,7 +5,6 @@ import { useEffect, useRef } from 'react'
 import { useBooking, scrollToBooking } from '../../booking'
 import { SERVICE_COPY, t } from '../../copy'
 import { getServiceById } from '../../data/siteContent'
-import { trackBookClick } from '../../lib/metaPixel'
 import styles from './ServiceModal.module.css'
 
 export default function ServiceModal() {
@@ -21,7 +20,6 @@ export default function ServiceModal() {
   if (!service || !copy) return null
 
   const handleBook = () => {
-    trackBookClick()
     closeServiceModal()
     scrollToBooking()
   }

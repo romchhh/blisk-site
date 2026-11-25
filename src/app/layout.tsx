@@ -1,36 +1,30 @@
 import type { Metadata, Viewport } from 'next'
 import { BRAND } from './brand'
 import { buildMetadata } from './lib/seo'
-import { SITE_NAME } from './lib/site'
-import MetaPixel from './components/MetaPixel'
-import MetaPixelPageView from './components/MetaPixelPageView'
+import { DEFAULT_TITLE, SEO_KEYWORDS, SITE_NAME, SITE_URL } from './lib/site'
 import './globals.css'
 import './lumina-clean.css'
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: `${SITE_NAME} — хімчистка меблів у Чернівцях`,
+    title: DEFAULT_TITLE,
     path: '/',
   }),
+  metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
-  authors: [{ name: BRAND.name }],
+  authors: [{ name: BRAND.name, url: SITE_URL }],
   creator: BRAND.name,
   publisher: BRAND.name,
   category: 'Home Services',
-  keywords: [
-    'хімчистка меблів Чернівці',
-    'хімчистка диванів',
-    'хімчистка матраців',
-    'хімчистка килимів',
-    'миття вікон Чернівці',
-    'Blisk Eco Cleaning',
-    'прибирання Чернівці',
-    'blisk_cv',
-  ],
+  keywords: [...SEO_KEYWORDS],
   formatDetection: {
     email: true,
     address: false,
     telephone: true,
+  },
+  icons: {
+    icon: [{ url: '/icon', type: 'image/png' }],
+    apple: [{ url: '/media/logo.png' }],
   },
 }
 
@@ -45,8 +39,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="uk">
       <body className="lumina-clean">
-        <MetaPixel />
-        <MetaPixelPageView />
         {children}
       </body>
     </html>
