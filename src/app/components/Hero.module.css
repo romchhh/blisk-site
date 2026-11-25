@@ -17,16 +17,16 @@
 
 .bgImage {
   object-fit: cover;
-  object-position: 58% center;
+  object-position: center 28%;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(5, 11, 20, 0.55);
+  background-color: rgba(0, 0, 0, 0.45);
   background-image:
-    linear-gradient(to top, rgba(5, 11, 20, 0.92) 0%, rgba(5, 11, 20, 0.5) 48%, rgba(5, 11, 20, 0.35) 100%),
-    linear-gradient(to right, rgba(5, 11, 20, 0.72) 0%, rgba(5, 11, 20, 0.35) 42%, transparent 70%);
+    linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.38) 48%, rgba(0, 0, 0, 0.22) 100%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.22) 42%, transparent 70%);
 }
 
 .orb1,
@@ -43,7 +43,7 @@
   height: 420px;
   top: 12%;
   right: -8%;
-  background: rgba(37, 99, 235, 0.18);
+  background: rgba(0, 0, 0, 0.12);
   animation: float 12s ease-in-out infinite;
 }
 
@@ -52,7 +52,7 @@
   height: 280px;
   bottom: 18%;
   left: -6%;
-  background: rgba(96, 165, 250, 0.1);
+  background: rgba(0, 0, 0, 0.08);
   animation: float 10s ease-in-out infinite reverse;
 }
 
@@ -77,11 +77,12 @@
 .headline {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(40px, 6vw, 76px);
-  line-height: 1.08;
+  font-size: clamp(32px, 4.6vw, 58px);
+  line-height: 1.1;
   color: #fff;
-  letter-spacing: -0.04em;
-  max-width: 15ch;
+  letter-spacing: -0.03em;
+  max-width: 22ch;
+  white-space: nowrap;
   overflow: visible;
   text-shadow: 0 2px 24px rgba(5, 11, 20, 0.55), 0 1px 4px rgba(5, 11, 20, 0.4);
 }
@@ -107,7 +108,7 @@
 .bottomRow {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 28px;
   animation: slideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
 }
@@ -263,8 +264,9 @@
   }
 
   .headline {
-    font-size: clamp(34px, 9vw, 48px);
+    font-size: clamp(28px, 7.5vw, 40px);
     max-width: none;
+    white-space: normal;
   }
 
   .meta {

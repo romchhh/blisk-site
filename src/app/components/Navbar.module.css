@@ -18,13 +18,13 @@
 }
 
 .solid {
-  background: #fff;
+  background: color-mix(in srgb, var(--page-bg) 92%, transparent);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   padding: 10px var(--page-pad);
   min-height: 76px;
-  box-shadow: 0 8px 28px rgba(5, 11, 20, 0.08);
-  border-bottom: 1px solid rgba(29, 110, 245, 0.1);
+  box-shadow: 0 8px 28px rgba(20, 32, 24, 0.06);
+  border-bottom: 1px solid rgba(27, 48, 34, 0.08);
 }
 
 .brand {
@@ -223,7 +223,7 @@
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: #fff;
+  background: var(--page-bg);
   flex-direction: column;
   align-items: center;
   justify-content: center;

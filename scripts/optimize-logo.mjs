@@ -4,8 +4,8 @@ import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
-const logoPath = path.join(root, 'public', 'logo.png')
-const webpPath = path.join(root, 'public', 'logo.webp')
+const logoPath = path.join(root, 'public', 'media', 'logo.png')
+const webpPath = path.join(root, 'public', 'media', 'logo.webp')
 
 const input = await readFile(logoPath)
 const meta = await sharp(input).metadata()

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { t } from '../../copy'
+import Reveal from '../Reveal'
 import { SectionHeading } from './SectionHeading'
 import styles from './sections.module.css'
 
@@ -11,13 +12,14 @@ export default function FaqSection() {
   return (
     <section id="faq" className={`${styles.section} ${styles.sectionGlow}`}>
       <div className={styles.inner}>
-        <SectionHeading
-          title={<>{t.faq.titleBefore}<em>{t.faq.titleEm}</em></>}
-          lead={t.faq.lead}
-          centered
-        />
+        <Reveal>
+          <SectionHeading
+            title={<>{t.faq.titleBefore}<em>{t.faq.titleEm}</em></>}
+            lead={t.faq.lead}
+          />
+        </Reveal>
 
-        <div className={styles.faqList}>
+        <Reveal className={styles.faqList} stagger delay={80}>
           {t.faq.items.map((item, index) => {
             const open = openIndex === index
             return (
@@ -37,7 +39,7 @@ export default function FaqSection() {
               </div>
             )
           })}
-        </div>
+        </Reveal>
       </div>
     </section>
   )

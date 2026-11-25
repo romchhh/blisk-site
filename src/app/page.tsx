@@ -4,7 +4,7 @@ import { buildMetadata, localBusinessJsonLd, webSiteJsonLd } from './lib/seo'
 import { SITE_NAME } from './lib/site'
 
 export const metadata = buildMetadata({
-  title: `${SITE_NAME} — Premium Home Cleaning in New Jersey`,
+  title: `${SITE_NAME} — хімчистка меблів у Чернівцях`,
   path: '/',
 })
 

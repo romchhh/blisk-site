@@ -20,13 +20,13 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
     slug: 'privacy-policy',
     path: LEGAL_PATHS.privacy,
     title: 'Privacy Policy',
-    description: 'How Royal Glow Cleaning collects, uses, and protects your personal information.',
+    description: 'How Blisk Eco Cleaning collects, uses, and protects your personal information.',
     updated: 'September 22, 2025',
     sections: [
       {
         heading: 'Overview',
         paragraphs: [
-          'Royal Glow Cleaning ("we," "us," or "our") respects your privacy. This Privacy Policy explains what information we collect when you visit our website, request a quote, or book a cleaning service, and how we use that information.',
+          'Blisk Eco Cleaning ("we," "us," or "our") respects your privacy. This Privacy Policy explains what information we collect when you visit our website, request a quote, or book a cleaning service, and how we use that information.',
           'By using our website or services, you agree to the practices described in this policy.',
         ],
       },
@@ -37,7 +37,7 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
           'Contact details such as your name, phone number, email address, and service address',
           'Booking details including preferred dates, service type, home size, and special instructions',
           'Payment-related information processed through our payment partners (we do not store full card numbers on our servers)',
-          'Communications you send us via forms, email, phone, or WhatsApp',
+          'Communications you send us via forms, email, phone, or Instagram Direct',
           'Technical data such as IP address, browser type, and pages visited (via cookies and analytics, where enabled)',
         ],
       },
@@ -57,7 +57,7 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
         heading: 'Sharing of information',
         paragraphs: [
           'We do not sell your personal information. We may share information with trusted service providers who help us operate our business — for example, scheduling tools, payment processors, or messaging platforms — only as needed to deliver our services.',
-          'We may also disclose information if required by law or to protect the rights, safety, and property of Royal Glow Cleaning, our customers, or others.',
+          'We may also disclose information if required by law or to protect the rights, safety, and property of Blisk Eco Cleaning, our customers, or others.',
         ],
       },
       {
@@ -69,7 +69,7 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
       {
         heading: 'Your rights',
         paragraphs: [
-          'Depending on your location, you may have the right to access, correct, delete, or restrict the use of your personal information. To make a request, contact us at royalglowcleaning01@gmail.com or (908) 733-6768.',
+          'Depending on your location, you may have the right to access, correct, delete, or restrict the use of your personal information. To make a request, contact us at royalglowcleaning01@gmail.com or .',
         ],
       },
       {
@@ -87,7 +87,7 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
       {
         heading: 'Contact us',
         paragraphs: [
-          'If you have questions about this Privacy Policy, contact Royal Glow Cleaning at royalglowcleaning01@gmail.com or (908) 733-6768.',
+          'If you have questions about this Privacy Policy, contact Blisk Eco Cleaning at royalglowcleaning01@gmail.com or .',
         ],
       },
     ],
@@ -96,19 +96,19 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
     slug: 'terms-and-conditions',
     path: LEGAL_PATHS.terms,
     title: 'Terms & Conditions',
-    description: 'Terms and conditions for using Royal Glow Cleaning website and booking services.',
+    description: 'Terms and conditions for using Blisk Eco Cleaning website and booking services.',
     updated: 'September 22, 2025',
     sections: [
       {
         heading: 'Agreement',
         paragraphs: [
-          'These Terms & Conditions ("Terms") govern your use of the Royal Glow Cleaning website and the booking of our residential cleaning services in New Jersey. By accessing our website or booking a service, you agree to these Terms.',
+          'These Terms & Conditions ("Terms") govern your use of the Blisk Eco Cleaning website and the booking of our residential cleaning services in Чернівці. By accessing our website or booking a service, you agree to these Terms.',
         ],
       },
       {
         heading: 'Services',
         paragraphs: [
-          'Royal Glow Cleaning provides residential cleaning services including standard cleaning, deep cleaning, move-in/move-out cleaning, and related add-ons as described on our website. Service scope, pricing, and availability are confirmed at the time of booking or quote.',
+          'Blisk Eco Cleaning provides residential cleaning services including standard cleaning, deep cleaning, move-in/move-out cleaning, and related add-ons as described on our website. Service scope, pricing, and availability are confirmed at the time of booking or quote.',
         ],
       },
       {
@@ -148,25 +148,25 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
       {
         heading: 'Limitation of liability',
         paragraphs: [
-          'To the fullest extent permitted by law, Royal Glow Cleaning is not liable for indirect, incidental, or consequential damages. Our total liability for any claim relating to a service is limited to the amount paid for that specific service, except where prohibited by law.',
+          'To the fullest extent permitted by law, Blisk Eco Cleaning is not liable for indirect, incidental, or consequential damages. Our total liability for any claim relating to a service is limited to the amount paid for that specific service, except where prohibited by law.',
         ],
       },
       {
         heading: 'Website use',
         paragraphs: [
-          'You may not misuse our website, attempt unauthorized access, or use our content for commercial purposes without permission. All website content is owned by Royal Glow Cleaning or its licensors.',
+          'You may not misuse our website, attempt unauthorized access, or use our content for commercial purposes without permission. All website content is owned by Blisk Eco Cleaning or its licensors.',
         ],
       },
       {
         heading: 'Governing law',
         paragraphs: [
-          'These Terms are governed by the laws of the State of New Jersey, without regard to conflict-of-law principles.',
+          'These Terms are governed by the laws of the State of Чернівці, without regard to conflict-of-law principles.',
         ],
       },
       {
         heading: 'Contact',
         paragraphs: [
-          'Questions about these Terms? Email royalglowcleaning01@gmail.com or call (908) 733-6768.',
+          'Questions about these Terms? Email royalglowcleaning01@gmail.com or call .',
         ],
       },
     ],
@@ -175,7 +175,7 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
     slug: 'cancellation-policy',
     path: LEGAL_PATHS.cancellation,
     title: 'Cancellation Policy',
-    description: 'Royal Glow Cleaning cancellation, rescheduling, and refund guidelines.',
+    description: 'Blisk Eco Cleaning cancellation, rescheduling, and refund guidelines.',
     updated: 'September 22, 2025',
     sections: [
       {
@@ -202,7 +202,7 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
       {
         heading: 'How to cancel or reschedule',
         paragraphs: [
-          'Contact us by phone at (908) 733-6768, email at royalglowcleaning01@gmail.com, or WhatsApp. Please include your name, service address, and original appointment time.',
+          'Contact us by phone at , email at royalglowcleaning01@gmail.com, or Instagram Direct. Please include your name, service address, and original appointment time.',
         ],
       },
       {
@@ -229,7 +229,7 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
     slug: 'cookies-policy',
     path: LEGAL_PATHS.cookies,
     title: 'Cookies Policy',
-    description: 'How Royal Glow Cleaning uses cookies and similar technologies on this website.',
+    description: 'How Blisk Eco Cleaning uses cookies and similar technologies on this website.',
     updated: 'September 22, 2025',
     sections: [
       {
@@ -288,13 +288,13 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
     slug: 'subscription-terms',
     path: LEGAL_PATHS.subscription,
     title: 'Subscription Terms',
-    description: 'Terms for Royal Glow Cleaning recurring and subscription cleaning plans.',
+    description: 'Terms for Blisk Eco Cleaning recurring and subscription cleaning plans.',
     updated: 'September 22, 2025',
     sections: [
       {
         heading: 'Recurring service plans',
         paragraphs: [
-          'Royal Glow Cleaning offers recurring cleaning plans (weekly, bi-weekly, or monthly) for customers who want consistent home maintenance. These Subscription Terms apply in addition to our general Terms & Conditions.',
+          'Blisk Eco Cleaning offers recurring cleaning plans (weekly, bi-weekly, or monthly) for customers who want consistent home maintenance. These Subscription Terms apply in addition to our general Terms & Conditions.',
         ],
       },
       {
@@ -336,7 +336,7 @@ export const LEGAL_PAGES: Record<keyof typeof LEGAL_PATHS, LegalPageData> = {
       {
         heading: 'Contact',
         paragraphs: [
-          'To start, change, or cancel a subscription plan, call (908) 733-6768 or email royalglowcleaning01@gmail.com.',
+          'To start, change, or cancel a subscription plan, call  or email royalglowcleaning01@gmail.com.',
         ],
       },
     ],

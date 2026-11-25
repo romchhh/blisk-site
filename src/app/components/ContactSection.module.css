@@ -1,7 +1,7 @@
 .section {
-  background: var(--white);
+  background: var(--page-bg);
   padding: var(--section-py) var(--page-pad);
-  border-top: 1px solid rgba(5, 11, 20, 0.06);
+  border-top: 1px solid rgba(27, 48, 34, 0.06);
 }
 
 .inner {
@@ -171,7 +171,7 @@
 .field input:focus,
 .field textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+  box-shadow: 0 0 0 3px rgba(47, 90, 60, 0.18);
   background: #fff;
 }
 
@@ -247,13 +247,13 @@
   letter-spacing: 0.04em;
   cursor: pointer;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 6px 24px rgba(47, 90, 60, 0.35);
 }
 
 .submit:hover:not(:disabled) {
   background: var(--accent-deep);
   transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 10px 32px rgba(47, 90, 60, 0.45);
 }
 
 .submit:disabled {

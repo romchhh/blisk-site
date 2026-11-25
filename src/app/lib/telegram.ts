@@ -31,7 +31,7 @@ export function formatLeadMessage(payload: LeadPayload) {
     timeStyle: 'short',
   })
 
-  lines.push('━━━━━━━━━━━━━━━━', `<i>${timestamp} · Royal Glow Cleaning</i>`)
+  lines.push('━━━━━━━━━━━━━━━━', `<i>${timestamp} · Blisk Eco Cleaning</i>`)
   return lines.join('\n')
 }
 

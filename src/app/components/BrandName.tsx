@@ -11,11 +11,11 @@ export function BrandName({ variant = 'header', className }: BrandNameProps) {
   return (
     <span className={`${styles.brand} ${styles[variant]} ${className ?? ''}`}>
       <Image
-        src="/logo.png"
+        src="/media/logo.png"
         alt={BRAND.name}
-        width={256}
-        height={218}
-        sizes={variant === 'footer' ? '112px' : '(max-width: 480px) 44px, (max-width: 768px) 48px, 58px'}
+        width={384}
+        height={256}
+        sizes={variant === 'footer' ? '220px' : '(max-width: 480px) 128px, (max-width: 768px) 140px, 168px'}
         className={styles.logo}
         priority={variant === 'header'}
         quality={85}

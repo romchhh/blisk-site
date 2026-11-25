@@ -24,12 +24,12 @@ export function buildMetadata({ title, description, path = '', noIndex }: PageMe
     robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
     openGraph: {
       type: 'website',
-      locale: 'en_US',
+      locale: 'uk_UA',
       url,
       siteName: SITE_NAME,
       title: pageTitle,
       description: pageDescription,
-      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: SITE_NAME }],
+      images: [{ url: OG_IMAGE, width: 1080, height: 1350, alt: SITE_NAME }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -38,8 +38,8 @@ export function buildMetadata({ title, description, path = '', noIndex }: PageMe
       images: [OG_IMAGE],
     },
     other: {
-      'geo.region': 'US-NJ',
-      'geo.placename': 'New Jersey',
+      'geo.region': 'UA-77',
+      'geo.placename': 'Chernivtsi',
     },
   }
 }
@@ -51,36 +51,34 @@ export function localBusinessJsonLd() {
     name: BRAND.name,
     description: DEFAULT_DESCRIPTION,
     url: SITE_URL,
-    telephone: BRAND.phoneTel,
-    email: BRAND.email,
     image: OG_IMAGE,
     areaServed: [
-      { '@type': 'AdministrativeArea', name: 'Monmouth County, NJ' },
-      { '@type': 'AdministrativeArea', name: 'Ocean County, NJ' },
-      { '@type': 'AdministrativeArea', name: 'Mercer County, NJ' },
-      { '@type': 'AdministrativeArea', name: 'Burlington County, NJ' },
+      { '@type': 'City', name: 'Чернівці' },
+      { '@type': 'AdministrativeArea', name: 'Чернівецька область' },
     ],
     address: {
       '@type': 'PostalAddress',
-      addressRegion: 'NJ',
-      addressCountry: 'US',
+      addressLocality: 'Чернівці',
+      addressRegion: 'Чернівецька область',
+      addressCountry: 'UA',
     },
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '08:00',
+        opens: '09:00',
         closes: '20:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Saturday', 'Sunday'],
-        opens: '08:00',
+        opens: '10:00',
         closes: '18:00',
       },
     ],
-    priceRange: '$$',
-    sameAs: [BRAND.whatsapp],
+    telephone: BRAND.phoneTel,
+    priceRange: '₴₴',
+    sameAs: [BRAND.instagram],
   }
 }
 
@@ -91,6 +89,7 @@ export function webSiteJsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     description: DEFAULT_DESCRIPTION,
+    inLanguage: 'uk-UA',
     publisher: { '@type': 'Organization', name: SITE_NAME },
   }
 }

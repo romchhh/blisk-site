@@ -1,24 +1,27 @@
 'use client'
+
 import Link from 'next/link'
 import { BRAND } from '../brand'
 import { t } from '../copy'
 import { BrandName } from './BrandName'
-import WhatsAppLink from './WhatsAppLink'
+import Reveal from './Reveal'
 import styles from './Footer.module.css'
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <Link href="/" className={styles.brand}>
-        <BrandName variant="footer" />
-      </Link>
+      <Reveal className={styles.shell} variant="up">
+        <div className={styles.header}>
+          <Link href="/" className={styles.brand}>
+            <BrandName variant="footer" />
+          </Link>
 
-      <div className={styles.top}>
-        <nav className={styles.links} aria-label={t.footer.navLabel}>
-          {t.footer.links.map((label, i) => (
-            <a key={label} href={t.footer.linkTargets[i]}>{label}</a>
-          ))}
-        </nav>
+          <nav className={styles.links} aria-label={t.footer.navLabel}>
+            {t.footer.links.map((label, i) => (
+              <a key={label} href={t.footer.linkTargets[i]}>{label}</a>
+            ))}
+          </nav>
+        </div>
 
         <div className={styles.cols}>
           <div className={styles.col}>
@@ -31,11 +34,9 @@ export default function Footer() {
             <h3>{t.footer.contactsTitle}</h3>
             <p>{BRAND.address}<br />{BRAND.city}</p>
             <a href={`tel:${BRAND.phoneTel}`}>{BRAND.phone}</a>
-            <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
-            <WhatsAppLink>WhatsApp</WhatsAppLink>
           </div>
 
-          <div className={`${styles.col} ${styles.colPolicies}`}>
+          <div className={styles.col}>
             <h3>{t.footer.policiesTitle}</h3>
             <div className={styles.policyList}>
               {t.footer.legal.map((item) => (
@@ -44,20 +45,20 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
 
-      <div className={styles.bottom}>
-        <span>© {new Date().getFullYear()} {BRAND.name}. {t.footer.rights}</span>
-        <a
-          href={t.footer.craftedByUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.craftedBy}
-        >
-          <span>{t.footer.craftedBy}</span>
-          <strong>{t.footer.craftedByName}</strong>
-        </a>
-      </div>
+        <div className={styles.bottom}>
+          <span>© {new Date().getFullYear()} {BRAND.name}. {t.footer.rights}</span>
+          <a
+            href={t.footer.craftedByUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.craftedBy}
+          >
+            <span>{t.footer.craftedBy}</span>
+            <strong>{t.footer.craftedByName}</strong>
+          </a>
+        </div>
+      </Reveal>
     </footer>
   )
 }

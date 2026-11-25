@@ -1,19 +1,24 @@
 import { IMAGE_WIDTH, unsplashImage } from './lib/images'
 
 export const BRAND = {
-  name: 'Royal Glow Cleaning',
-  shortName: 'Royal Glow',
-  tagline: 'When your home truly glows',
-  phone: '(908) 733-6768',
-  phoneTel: '+19087336768',
-  email: 'royalglowcleaning01@gmail.com',
-  whatsapp: 'https://wa.me/19087336768',
-  address: 'Monmouth, Ocean, Mercer & Burlington Counties',
-  city: 'New Jersey, USA',
-  hero: unsplashImage('photo-1628177142898-93e36e4e3a50', IMAGE_WIDTH.hero),
-  contactImage: unsplashImage('photo-1556911220-bff31c812dba', IMAGE_WIDTH.contact),
-  aboutTeam: unsplashImage('photo-1581578731548-c64695cc6952', IMAGE_WIDTH.about),
-  aboutCta: unsplashImage('photo-1527515637462-cff94eecc1ac', IMAGE_WIDTH.about),
+  name: 'Blisk Eco Cleaning',
+  shortName: 'Blisk',
+  tagline: 'Чистота у кожному куточку',
+  phone: '+380 50 123 45 67',
+  phoneTel: '+380501234567',
+  email: '',
+  whatsapp: 'https://instagram.com/blisk_cv',
+  instagram: 'https://instagram.com/blisk_cv',
+  instagramHandle: '@blisk_cv',
+  address: 'Чернівці та область',
+  city: 'Чернівці, Україна',
+  hero: '/media/hero-team.jpg',
+  aboutVideo: '/media/about/work.mp4',
+  aboutPoster: '/media/about/poster.jpg',
+  contactImage: unsplashImage('photo-1616486338812-3dadae4b4ace', IMAGE_WIDTH.contact),
+  aboutTeam: '/media/about/poster.jpg',
+  aboutCta: unsplashImage('photo-1493663284031-b7e3aefcae8e', IMAGE_WIDTH.about),
 } as const
 
-export const ZIP_PATTERN = /^\d{5}(?:-\d{4})?$/
+/** Ukrainian settlement / city name (free text) */
+export const CITY_PATTERN = /^.{2,60}$/

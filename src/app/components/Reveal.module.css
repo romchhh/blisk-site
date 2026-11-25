@@ -1,0 +1,62 @@
+.reveal {
+  --reveal-delay: 0ms;
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay);
+  will-change: opacity, transform;
+}
+
+.left {
+  transform: translate3d(-28px, 0, 0);
+}
+
+.right {
+  transform: translate3d(28px, 0, 0);
+}
+
+.scale {
+  transform: translate3d(0, 18px, 0) scale(0.96);
+}
+
+.fade {
+  transform: none;
+}
+
+.in {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+.stagger > * {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stagger.in > * {
+  opacity: 1;
+  transform: none;
+}
+
+.stagger.in > *:nth-child(1) { transition-delay: 40ms; }
+.stagger.in > *:nth-child(2) { transition-delay: 110ms; }
+.stagger.in > *:nth-child(3) { transition-delay: 180ms; }
+.stagger.in > *:nth-child(4) { transition-delay: 250ms; }
+.stagger.in > *:nth-child(5) { transition-delay: 320ms; }
+.stagger.in > *:nth-child(6) { transition-delay: 390ms; }
+.stagger.in > *:nth-child(7) { transition-delay: 460ms; }
+.stagger.in > *:nth-child(8) { transition-delay: 530ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

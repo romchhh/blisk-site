@@ -9,7 +9,7 @@ import './lumina-clean.css'
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: `${SITE_NAME} — Premium Home Cleaning in New Jersey`,
+    title: `${SITE_NAME} — хімчистка меблів у Чернівцях`,
     path: '/',
   }),
   applicationName: SITE_NAME,
@@ -18,17 +18,14 @@ export const metadata: Metadata = {
   publisher: BRAND.name,
   category: 'Home Services',
   keywords: [
-    'house cleaning',
-    'home cleaning',
-    'residential cleaning',
-    'deep cleaning',
-    'move out cleaning',
-    'Monmouth County cleaning',
-    'Ocean County cleaning',
-    'Mercer County cleaning',
-    'Burlington County cleaning',
-    'New Jersey cleaning service',
-    'Royal Glow Cleaning',
+    'хімчистка меблів Чернівці',
+    'хімчистка диванів',
+    'хімчистка матраців',
+    'хімчистка килимів',
+    'миття вікон Чернівці',
+    'Blisk Eco Cleaning',
+    'прибирання Чернівці',
+    'blisk_cv',
   ],
   formatDetection: {
     email: true,
@@ -41,12 +38,12 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  themeColor: '#1d6ef5',
+  themeColor: '#1b3022',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="uk">
       <body className="lumina-clean">
         <MetaPixel />
         <MetaPixelPageView />

@@ -30,7 +30,7 @@ type BookingContextValue = {
 }
 
 const BookingContext = createContext<BookingContextValue | null>(null)
-const PROMPT_DISMISSED_KEY = 'royalglow-booking-prompt-dismissed'
+const PROMPT_DISMISSED_KEY = 'blisk-booking-prompt-dismissed'
 
 export function BookingProvider({ children }: { children: ReactNode }) {
   const [zip, setZip] = useState('')

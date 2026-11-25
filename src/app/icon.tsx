@@ -13,14 +13,15 @@ export default function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: '#1d6ef5',
+          background: '#1b3022',
           borderRadius: 8,
-          color: '#fff',
+          color: '#c9d5b5',
           fontSize: 18,
           fontWeight: 700,
+          fontFamily: 'Montserrat, sans-serif',
         }}
       >
-        R
+        B
       </div>
     ),
     { ...size },

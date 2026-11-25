@@ -11,12 +11,12 @@ export default function Hero() {
       <div className={styles.bg}>
         <Image
           src={BRAND.hero}
-          alt=""
+          alt="Команда Blisk Eco Cleaning"
           fill
           priority
           fetchPriority="high"
           sizes="100vw"
-          quality={75}
+          quality={82}
           className={styles.bgImage}
         />
       </div>
@@ -55,24 +55,11 @@ export default function Hero() {
         </div>
 
         <div className={styles.bottomRow}>
-          <div className={styles.contact}>
-            <a href={`tel:${BRAND.phoneTel}`} className={styles.phone}>{BRAND.phone}</a>
-            <span className={styles.address}>{BRAND.address}<br />{BRAND.city}</span>
-          </div>
-
           <div className={styles.actions}>
             <BookingTrigger className={styles.card}>
               <div className={styles.cardText}>
-                <p className={styles.cardLabel}>{t.hero.cardLabel}</p>
                 <p className={styles.cardTitle}>{t.hero.cardTitle}</p>
-                <p className={styles.cardSub}>
-                  {t.hero.cardSub.split('\n').map((line, i) => (
-                    <span key={line}>
-                      {i > 0 && <br />}
-                      {line}
-                    </span>
-                  ))}
-                </p>
+                <p className={styles.cardSub}>{t.hero.cardSub}</p>
               </div>
               <div className={styles.cardArrow}>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -80,7 +67,7 @@ export default function Hero() {
                 </svg>
               </div>
             </BookingTrigger>
-            <a href="#services" className={styles.secondaryBtn}>{t.hero.ctaSecondary}</a>
+            <a href="#prices" className={styles.secondaryBtn}>{t.hero.ctaSecondary}</a>
           </div>
         </div>
       </div>

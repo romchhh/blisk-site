@@ -1,6 +1,6 @@
 import { BRAND } from '../brand'
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://royalglowcleaning.com').replace(/\/$/, '')
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://blisk.cv.ua').replace(/\/$/, '')
 
 export const SITE_NAME = BRAND.name
 
@@ -8,7 +8,7 @@ export const SITE_NAME = BRAND.name
 export const META_PIXEL_ID = '1457531026596195'
 
 export const DEFAULT_DESCRIPTION =
-  'Professional residential cleaning in Monmouth, Ocean, Mercer & Burlington Counties, NJ. Standard, deep, move-in/out & laundry services. Book online or call for a free quote.'
+  'Хімчистка меблів, матраців і килимів у Чернівцях та області. Миття вікон, прибирання. Eco Cleaning Blisk — чистота у кожному куточку. Запис у Direct @blisk_cv.'
 
 export const LEGAL_PATHS = {
   privacy: '/privacy-policy',
@@ -19,6 +19,6 @@ export const LEGAL_PATHS = {
 } as const
 
 export const OPENING_HOURS = {
-  weekdays: { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '20:00' },
-  weekend: { days: ['Saturday', 'Sunday'], opens: '08:00', closes: '18:00' },
+  weekdays: { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '20:00' },
+  weekend: { days: ['Saturday', 'Sunday'], opens: '10:00', closes: '18:00' },
 } as const

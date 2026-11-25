@@ -167,13 +167,42 @@
   color: var(--color-body);
 }
 
+.callLead {
+  margin: 0;
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.phoneBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.phoneBtn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
 .socialLink {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-weight: 600;
   text-decoration: none;
-  color: #25d366;
+  color: var(--accent-deep);
   transition: opacity 0.2s;
 }
 

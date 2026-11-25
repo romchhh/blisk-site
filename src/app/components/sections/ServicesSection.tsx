@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { useBooking } from '../../booking'
 import { SERVICE_COPY, t } from '../../copy'
 import { SERVICES, type ServiceItem } from '../../data/siteContent'
+import Reveal from '../Reveal'
 import { SectionHeading } from './SectionHeading'
 import styles from './sections.module.css'
 
@@ -58,12 +59,14 @@ export default function ServicesSection() {
   return (
     <section id="services" className={`${styles.section} ${styles.sectionGlow}`}>
       <div className={styles.inner}>
-        <SectionHeading
-          title={<>{t.services.titleBefore}<em>{t.services.titleEm}</em></>}
-          lead={t.services.lead}
-        />
+        <Reveal>
+          <SectionHeading
+            title={<>{t.services.titleBefore}<em>{t.services.titleEm}</em></>}
+            lead={t.services.lead}
+          />
+        </Reveal>
 
-        <div className={styles.servicesCarousel}>
+        <Reveal className={styles.servicesCarousel} delay={100}>
           <button
             type="button"
             className={`${styles.carouselArrow} ${styles.carouselArrowPrev}`}
@@ -127,9 +130,11 @@ export default function ServicesSection() {
               <path d="M7 3 L13 9 L7 15" />
             </svg>
           </button>
-        </div>
+        </Reveal>
 
-        <p className={styles.servicesNote}>{t.services.notes}</p>
+        <Reveal delay={180}>
+          <p className={styles.servicesNote}>{t.services.notes}</p>
+        </Reveal>
       </div>
     </section>
   )

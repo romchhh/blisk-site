@@ -1,9 +1,8 @@
 'use client'
 
-import Image from 'next/image'
 import { BRAND } from '../../brand'
-import { BookingTrigger } from '../../booking'
 import { t } from '../../copy'
+import Reveal from '../Reveal'
 import { SectionHeading } from './SectionHeading'
 import styles from './sections.module.css'
 
@@ -12,7 +11,7 @@ export default function AboutSection() {
     <section id="about" className={styles.section}>
       <div className={styles.inner}>
         <div className={styles.aboutLayout}>
-          <div className={styles.aboutCopy}>
+          <Reveal className={styles.aboutCopy} variant="left">
             <SectionHeading
               title={<>{t.about.titleBefore}<em>{t.about.titleEm}</em></>}
             />
@@ -20,21 +19,25 @@ export default function AboutSection() {
               <p key={paragraph.slice(0, 24)}>{paragraph}</p>
             ))}
             <div className={styles.aboutActions}>
-              <BookingTrigger className={styles.aboutBtn}>{t.about.ctaBtn}</BookingTrigger>
+              <a href={BRAND.instagram} target="_blank" rel="noopener noreferrer" className={styles.aboutBtn}>
+                {t.about.ctaBtn}
+              </a>
               <p className={styles.aboutTrust}>{t.about.ctaNote}</p>
             </div>
-          </div>
-          <div className={styles.aboutMedia}>
-            <Image
-              src={BRAND.aboutTeam}
-              alt={t.about.teamImageAlt}
-              fill
-              loading="lazy"
-              sizes="(max-width: 1024px) 100vw, 420px"
-              quality={75}
-              className={styles.aboutImage}
-            />
-          </div>
+          </Reveal>
+
+          <Reveal className={styles.aboutMedia} variant="right" delay={120}>
+            <video
+              className={styles.aboutVideo}
+              controls
+              playsInline
+              preload="metadata"
+              poster={BRAND.aboutPoster}
+              aria-label={t.about.teamImageAlt}
+            >
+              <source src={BRAND.aboutVideo} type="video/mp4" />
+            </video>
+          </Reveal>
         </div>
       </div>
     </section>

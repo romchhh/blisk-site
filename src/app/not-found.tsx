@@ -7,14 +7,13 @@ export default function NotFound() {
     <SiteShell>
       <section className={styles.wrap}>
         <p className={styles.code}>404</p>
-        <h1 className={styles.title}>Page not found</h1>
+        <h1 className={styles.title}>Сторінку не знайдено</h1>
         <p className={styles.text}>
-          The page you&apos;re looking for doesn&apos;t exist or may have been moved.
-          Head back home to book your next clean.
+          Сторінка не існує або була переміщена. Поверніться на головну, щоб записатись на хімчистку.
         </p>
         <div className={styles.actions}>
-          <Link href="/" className={styles.primary}>Back to home</Link>
-          <Link href="/#book" className={styles.secondary}>Book a cleaning</Link>
+          <Link href="/" className={styles.primary}>На головну</Link>
+          <Link href="/#book" className={styles.secondary}>Залишити заявку</Link>
         </div>
       </section>
     </SiteShell>

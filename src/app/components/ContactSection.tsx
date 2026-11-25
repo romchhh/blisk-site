@@ -7,6 +7,7 @@ import { getServiceOptions, getServiceTitle, t } from '../copy'
 import { isZipServed, normalizeZip } from '../data/zipCodes'
 import { submitLead } from '../lib/lead'
 import { trackFormStartOnce, trackLead } from '../lib/metaPixel'
+import Reveal from './Reveal'
 import { SectionHeading } from './sections/SectionHeading'
 import styles from './ContactSection.module.css'
 
@@ -38,7 +39,7 @@ export default function ContactSection() {
     e.preventDefault()
     if (!form.consent) return
     const normalized = normalizeZip(zip)
-    if (!/^\d{5}$/.test(normalized)) {
+    if (normalized.length < 2) {
       setZipError(t.contact.zipFormatError)
       return
     }
@@ -71,15 +72,15 @@ export default function ContactSection() {
   return (
     <section id="book" className={styles.section}>
       <div className={styles.inner}>
-        <div className={styles.intro}>
+        <Reveal className={styles.intro}>
           <SectionHeading
-            title={<>{t.contact.heading}<br /><em>{t.contact.headingEm}</em></>}
+            title={<>{t.contact.heading} <em>{t.contact.headingEm}</em></>}
             lead={t.contact.lead}
             centered
           />
-        </div>
+        </Reveal>
 
-        <div className={styles.panel}>
+        <Reveal className={styles.panel} delay={100} variant="scale">
           <div className={styles.visual}>
             <Image
               src={BRAND.contactImage}
@@ -96,7 +97,7 @@ export default function ContactSection() {
               <p className={styles.visualText}>{t.contact.visualText}</p>
               <div className={styles.visualContacts}>
                 <a href={`tel:${BRAND.phoneTel}`}>{BRAND.phone}</a>
-                <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
+                <span>{BRAND.address}</span>
               </div>
             </div>
           </div>
@@ -139,13 +140,12 @@ export default function ContactSection() {
                     <input
                       id="zip"
                       type="text"
-                      inputMode="numeric"
-                      autoComplete="postal-code"
-                      maxLength={5}
+                      autoComplete="address-level2"
+                      maxLength={60}
                       placeholder={t.contact.zipPh}
                       value={zip}
                       onChange={(e) => {
-                        setZip(e.target.value.replace(/\D/g, '').slice(0, 5))
+                        setZip(e.target.value.slice(0, 60))
                         if (zipError) setZipError('')
                       }}
                       required
@@ -186,7 +186,7 @@ export default function ContactSection() {
               </form>
             )}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

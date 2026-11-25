@@ -1,7 +1,7 @@
 .wrap {
   overflow: hidden;
-  background: var(--white);
-  border-block: 1px solid rgba(37, 99, 235, 0.1);
+  background: var(--page-bg);
+  border-block: 1px solid rgba(47, 90, 60, 0.1);
   padding: 14px 0;
   mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }

@@ -2,6 +2,8 @@
 
 import { t } from '../../copy'
 import { REVIEWS } from '../../data/siteContent'
+import Reveal from '../Reveal'
+import { SectionHeading } from './SectionHeading'
 import styles from './sections.module.css'
 
 function GoogleIcon() {
@@ -33,33 +35,29 @@ export default function ReviewsSection() {
   return (
     <section id="reviews" className={`${styles.section} ${styles.sectionSurface}`}>
       <div className={styles.inner}>
-        <div className={styles.reviewsIntro}>
-          <h2 className={`section-heading ${styles.reviewsHeading}`}>
-            {t.reviews.titleBefore}<em>{t.reviews.titleEm}</em>
-            <span className={styles.reviewsLeadSep}> — </span>
-            <span className={styles.reviewsLeadInline}>{t.reviews.lead}</span>
-          </h2>
-        </div>
+        <Reveal>
+          <SectionHeading
+            title={<>{t.reviews.titleBefore}<em>{t.reviews.titleEm}</em></>}
+            lead={t.reviews.lead}
+          />
+        </Reveal>
 
-        <div className={styles.reviewsRow}>
+        <Reveal className={styles.reviewsRow} stagger delay={90}>
           {REVIEWS.map((item) => (
             <article key={item.id} className={styles.reviewCard}>
               <div className={styles.reviewContent}>
                 <div className={styles.reviewHead}>
                   <GoogleIcon />
                   <div className={styles.reviewMeta}>
-                    <p className={styles.reviewAuthor}>{item.name}</p>
+                    <p className={styles.reviewName}>{item.name}</p>
                     <Stars count={item.rating} />
                   </div>
                 </div>
-                <p className={styles.reviewText}>
-                  <span className={styles.reviewQuote} aria-hidden="true">&ldquo;</span>
-                  {item.text}
-                </p>
+                <p className={styles.reviewText}>{item.text}</p>
               </div>
             </article>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   )

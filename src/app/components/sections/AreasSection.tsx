@@ -17,13 +17,13 @@ function PinIcon() {
 }
 
 export default function AreasSection() {
-  const [activeCounty, setActiveCounty] = useState<CountyId>('monmouth')
+  const [activeCounty, setActiveCounty] = useState<CountyId>('chernivtsi')
   const [zip, setZip] = useState('')
 
   const zipStatus = (() => {
     const normalized = normalizeZip(zip)
     if (!normalized) return null
-    if (!/^\d{5}$/.test(normalized)) return 'invalid'
+    if (normalized.length < 2) return 'invalid'
     return isZipServed(normalized) ? 'ok' : 'bad'
   })()
 
@@ -73,11 +73,10 @@ export default function AreasSection() {
               <input
                 id="zip-check"
                 type="text"
-                inputMode="numeric"
-                maxLength={5}
+                maxLength={60}
                 placeholder={t.areas.zipPh}
                 value={zip}
-                onChange={(e) => setZip(e.target.value.replace(/\D/g, '').slice(0, 5))}
+                onChange={(e) => setZip(e.target.value.slice(0, 60))}
               />
               {zipStatus === 'ok' && <p className={`${styles.zipStatus} ${styles.zipOk}`}>{t.areas.zipOk}</p>}
               {zipStatus === 'bad' && <p className={`${styles.zipStatus} ${styles.zipBad}`}>{t.areas.zipBad}</p>}

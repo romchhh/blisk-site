@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { BRAND } from '../../brand'
 import { useBooking } from '../../booking'
 import { getServiceTitle, t } from '../../copy'
 import { submitLead } from '../../lib/lead'
@@ -157,12 +158,16 @@ export default function BookingModal({
             </form>
             <div className={styles.altContact}>
               <span className={styles.or}>{t.booking.or}</span>
+              <p className={styles.callLead}>{t.booking.callLead}</p>
+              <a href={`tel:${BRAND.phoneTel}`} className={styles.phoneBtn}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z" />
+                </svg>
+                {BRAND.phone}
+              </a>
               <p className={styles.socialLine}>
                 <span>{t.booking.socialLead}</span>
                 <WhatsAppLink className={styles.socialLink}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.32 13.53c-.22.62-1.28 1.18-1.76 1.25-.45.07-.98.1-1.58-.1-.36-.12-.83-.3-1.43-.58-2.52-1.09-4.16-3.64-4.28-3.81-.12-.17-1.02-1.36-1.02-2.59 0-1.23.64-1.84.87-2.09.22-.25.49-.31.65-.31.16 0 .33 0 .47.01.15.01.35-.06.55.42.2.48.68 1.66.74 1.78.06.12.1.26.02.42-.08.16-.12.26-.24.4-.12.14-.25.31-.36.42-.12.12-.24.25-.1.49.13.24.58.96 1.25 1.55.86.76 1.58 1 1.82 1.11.24.11.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.16 1.2z" />
-                  </svg>
                   {t.booking.whatsapp}
                 </WhatsAppLink>
               </p>
