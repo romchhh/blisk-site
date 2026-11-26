@@ -12,21 +12,21 @@ function field(label: string, value: string) {
 }
 
 export function formatLeadMessage(payload: LeadPayload) {
-  const sourceLabel = payload.source === 'contact' ? 'Contact form' : 'Quick booking'
+  const sourceLabel = payload.source === 'contact' ? 'Форма на сайті' : 'Швидкий запис'
   const lines = [
-    `<b>🆕 New lead — ${sourceLabel}</b>`,
+    `<b>🆕 Нова заявка — ${sourceLabel}</b>`,
     '━━━━━━━━━━━━━━━━',
-    field('Name', payload.name),
-    field('Phone', payload.phone),
+    field('Імʼя', payload.name),
+    field('Телефон', payload.phone),
   ]
 
   if (payload.email?.trim()) lines.push(field('Email', payload.email.trim()))
-  if (payload.zip?.trim()) lines.push(field('ZIP', payload.zip.trim()))
-  if (payload.service?.trim()) lines.push(field('Service', payload.service.trim()))
-  if (payload.comment?.trim()) lines.push(field('Notes', payload.comment.trim()))
+  if (payload.zip?.trim()) lines.push(field('Місто / район', payload.zip.trim()))
+  if (payload.service?.trim()) lines.push(field('Послуга', payload.service.trim()))
+  if (payload.comment?.trim()) lines.push(field('Коментар', payload.comment.trim()))
 
-  const timestamp = new Date().toLocaleString('en-US', {
-    timeZone: 'America/New_York',
+  const timestamp = new Date().toLocaleString('uk-UA', {
+    timeZone: 'Europe/Kyiv',
     dateStyle: 'medium',
     timeStyle: 'short',
   })

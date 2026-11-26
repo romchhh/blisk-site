@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     const name = clean(body.name, 120)
     const phone = clean(body.phone, 40)
     const email = clean(body.email, 120)
-    const zip = clean(body.zip, 10)
+    const zip = clean(body.zip, 80)
     const service = clean(body.service, 120)
     const comment = clean(body.comment, 2000)
 
@@ -36,14 +36,11 @@ export async function POST(request: Request) {
     }
 
     if (source === 'contact') {
-      if (!/^\d{5}$/.test(zip)) {
-        return NextResponse.json({ error: 'Valid ZIP is required' }, { status: 400 })
+      if (zip.length < 2) {
+        return NextResponse.json({ error: 'City is required' }, { status: 400 })
       }
       if (!service) {
         return NextResponse.json({ error: 'Service is required' }, { status: 400 })
-      }
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        return NextResponse.json({ error: 'Valid email is required' }, { status: 400 })
       }
     }
 
